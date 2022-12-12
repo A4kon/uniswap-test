@@ -1,0 +1,20 @@
+{
+  "type": "postgres",
+  "host": "localhost",
+  "port": 5436,
+  "username": "postgres",
+  "database": "uniswap",
+  "password": "postgres",
+  "synchronize": false,
+  "logging": true,
+  "autoLoadEntities": true,
+  "entities": [
+    "./src/common/entities/*.*.*.entity{.ts,.js}"    
+  ],
+  "migrationsTableName": "migration",
+  "migrationsRun": true,
+  "migrations": ["src/migrations/*.ts"],
+  "cli": {
+    "migrationsDir": "src/migrations"
+  }
+}
